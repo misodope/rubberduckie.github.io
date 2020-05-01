@@ -1,0 +1,13 @@
+.rubber-duckie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    &__container {
+        font-size: 2rem;
+        font-family: 'Open Sans';
+        font-weight: 600;
+    }
+}
