@@ -8,7 +8,7 @@ const RubberDuck = () => {
   const ref = useRef();
 
   const fieldOfView = 75; //degrees
-  const aspect = window.innerWidth / window.innerHeight;
+  const aspect = 2;
   const near = 0.1;
   const far = 1000;
 
