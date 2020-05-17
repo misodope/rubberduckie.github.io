@@ -1,10 +1,12 @@
+@import "../styles/mixins";
+
 .rubber-duckie {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    margin-top: 200px;
 
     &__container {
         font-size: 2rem;

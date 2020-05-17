@@ -1,0 +1,18 @@
+@import "./mixins";
+
+.faqs {
+  font-family: "Roboto";
+  letter-spacing: 1.15px;
+
+  &__header {
+    font-weight: 600;
+    font-size: 36px;
+  }
+  &__container {
+    margin: 30px 0;
+
+    &--question {
+      font-weight: 600;
+    }
+  }
+}
