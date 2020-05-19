@@ -4,17 +4,15 @@
 .social {
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
 
   @include mobile {
-    flex-direction: column;
   }
 
   @include tablet {
-    flex-direction: column;
   }
 
   &__icon {

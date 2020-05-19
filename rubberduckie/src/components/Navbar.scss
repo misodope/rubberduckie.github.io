@@ -8,6 +8,8 @@
   font-family: "Roboto";
   letter-spacing: 0.75px;
   padding: 40px;
+  position: relative;
+  z-index: 1000;
 
   &__other-links {
     a {
@@ -38,13 +40,18 @@
 
     &--show {
       @include mobile {
-        display: block;
+        display: flex;
         font-weight: 600;
-        font-family: "Asap";
         letter-spacing: 0.75px;
-        position: absolute;
-        right: 30px;
+        position: fixed;
         padding: 10px;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        background: #fed330;
+        top: 0;
+        left: 0;
+        justify-content: center;
       }
     }
 
@@ -52,13 +59,17 @@
       @include mobile {
         display: flex;
         flex-direction: column;
-        text-align: right;
+        text-align: center;
+        justify-content: center;
       }
     }
 
     @include mobile {
       a {
         text-decoration: none;
+        font-family: 'Heebo', sans-serif !important;
+        margin: 25px 0;
+
         &:link,
         &:visited {
           color: #ff813f;
@@ -79,6 +90,22 @@
       width: 100%;
       text-align: right;
       padding: 10px;
+      position: relative;
+      z-index: 9999;
+    }
+  }
+
+  &__menu-icon {
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__close-icon {
+    display: none;
+
+    &--show {
+      display: initial;
     }
   }
 }

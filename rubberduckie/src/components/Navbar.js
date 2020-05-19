@@ -3,8 +3,8 @@ import "./Navbar.scss";
 import React, { useState } from "react";
 import { Link } from "gatsby"
 import classNames from "classnames";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faBars } from '@fortawesome/free-solid-svg-icons' 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' 
 
 const Navbar = () => { 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,10 +13,19 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     }
 
-    // const HamburgerIcon = <FontAwesomeIcon icon={faBars} />
+    const hamburgerClass = classNames("navbar__menu-icon", {
+        "navbar__menu-icon--hide": menuOpen,
+    });
+
+    const iconClass = classNames("navbar__close-icon", {
+        "navbar__close-icon--show": menuOpen,
+    });
+
+    const HamburgerIcon = <FontAwesomeIcon icon={faBars} size="2x" className={hamburgerClass}/>
+    const ExitIcon = <FontAwesomeIcon icon={faTimes} size="2x" className={iconClass}/>
 
     const mobileClass = classNames("navbar__mobile", {
-        "navbar__mobile--show": menuOpen
+        "navbar__mobile--show animated fadeIn": menuOpen
     });
 
     return (
@@ -31,7 +40,8 @@ const Navbar = () => {
                 </div>
             </nav>
             <span className="navbar__hamburger" onClick={onClick}>
-                Quack Menu
+                {HamburgerIcon}
+                {ExitIcon}
             </span>
             <nav className={mobileClass}>
                 <div className="navbar__mobile-links">
